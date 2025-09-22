@@ -17,6 +17,15 @@ import mongoose from "mongoose";
 ('src', 'constants.js');
 
 connectDB()
+.then(()=> {
+    app.listen(process.env.PORT || 8000, () => {
+        console.log(`Server is running at port : ${process.env.PORT}`);
+        //yaaha app.on bhi likh sakte h
+    })
+})
+.catch((err) => {
+    console.log("Mongo db connection failed !!! ", err)
+})
 
 
 
