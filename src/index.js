@@ -2,6 +2,7 @@
 // require('dotenv').config({path: './env'})
 // ye shi approach hai but code ki consistancy ko khrab krta hai 
 // 2nd dotenv approach 
+import { app } from "./app.js";
 import dotenv from "dotenv"
 import connectDB from "./db/index.js";
 dotenv.config({
